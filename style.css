@@ -1,36 +1,226 @@
-/* ... [CSS anterior mantido] ... */
+/* ---------------------------- */
+/* ESTILO MODERNO PREMIUM  */
+/* ---------------------------- */
+
+:root {
+    /* Cores e Variáveis (Inspiradas na Bandeira Congolesa) */
+    --primary: #FFD700; /* Amarelo Ouro */
+    --secondary: #008000; /* Verde Esmeralda */
+    --accent: #CF0000; /* Vermelho forte para acentos */
+    --bg: #F7F7F7; /* Fundo claro */
+    --text: #212121;
+    --radius: 10px;
+    --shadow: 0 8px 25px rgba(0,0,0,0.1);
+    --transition: 0.3s ease-in-out;
+}
+
+/* Reseta o comportamento da página */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', Arial, sans-serif; 
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+}
+
+/* Linha horizontal decorativa */
+hr {
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    margin: 0 40px; 
+}
+
+/* ---------------------------- */
+/* NAVBAR FIXA          */
+/* ---------------------------- */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: var(--shadow);
+    z-index: 1000;
+}
+
+nav .logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--secondary); /* Logo em Verde */
+    text-transform: uppercase;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 500;
+    transition: var(--transition);
+    padding: 5px 0;
+}
+
+.nav-links li a:hover {
+    color: var(--secondary);
+    border-bottom: 2px solid var(--primary); /* Linha Amarela no Hover */
+}
+
+/* Menu Hamburguer (escondido por defeito) */
+.menu-icon, #menu-toggle {
+    display: none;
+}
+
+
+/* Compensar a navbar fixa */
+header {
+    padding-top: 100px; 
+}
+
+/* ---------------------------- */
+/* HEADER / HERO        */
+/* ---------------------------- */
+header {
+    text-align: center;
+    padding: 80px 20px;
+    /* Imagem de fundo temática africana/congonela */
+    background: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url('images/hero-congo-bg.jpg') no-repeat center center; 
+    background-size: cover;
+}
+
+header h1 {
+    font-size: clamp(3rem, 7vw, 4.5rem);
+    color: var(--secondary);
+    margin-bottom: 5px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+header p {
+    margin: 15px auto 40px;
+    max-width: 800px;
+    color: var(--text);
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.header-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Botões base */
+.primary-btn, .secondary-btn {
+    padding: 15px 35px;
+    border: 2px solid transparent;
+    border-radius: 50px; /* Mais arredondado */
+    font-size: 1.05rem;
+    cursor: pointer;
+    transition: var(--transition);
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    letter-spacing: 0.5px;
+}
+
+/* Botão principal (Call to Action) */
+.primary-btn {
+    background: var(--primary);
+    color: var(--text);
+    box-shadow: 0 6px 15px rgba(255, 215, 0, 0.5);
+}
+
+.primary-btn:hover {
+    background: #e6c200;
+    transform: translateY(-2px);
+}
+
+/* Botão secundário */
+.secondary-btn {
+    background: var(--secondary);
+    color: white;
+    border-color: var(--secondary);
+}
+
+.secondary-btn:hover {
+    background: #006600;
+    border-color: #006600;
+}
 
 /* ---------------------------- */
 /* SECÇÕES NORMAIS      */
 /* ---------------------------- */
 section {
-    /* ... [Estilo da Section anterior mantido] ... */
+    padding: 80px 40px;
+    max-width: 1200px;
+    margin: auto;
 }
 
 section h2 {
-    /* ... [Estilo do H2 anterior mantido] ... */
+    font-size: 2.5rem;
+    color: var(--secondary); /* Títulos em Verde */
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: 700;
 }
 
 section p {
-    /* ... [Estilo do P anterior mantido] ... */
+    max-width: 900px;
+    margin: 0 auto 18px;
+    color: #444;
 }
 
 /* Estilo específico para a secção SOBRE */
 #sobre {
-    /* ... [Estilo do #sobre anterior mantido] ... */
+    background-color: white;
+    box-shadow: 0 0 30px rgba(0,0,0,0.03);
 }
 
 .sobre-content {
-    /* ... [Estilo do .sobre-content anterior mantido] ... */
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    margin-top: 30px;
 }
 
-/* ... [Restante do CSS da Secção Sobre mantido] ... */
+.sobre-text {
+    flex: 1;
+    text-align: left; 
+}
+
+.sobre-text p {
+    margin: 0 0 15px 0; 
+    max-width: 100%;
+}
+
+.sobre-img {
+    flex: 0 0 40%; 
+    max-width: 400px;
+    height: auto;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    object-fit: cover;
+}
+
 
 /* ---------------------------- */
-/* NOVO: SECÇÃO MENU          */
+/* SECÇÃO MENU          */
 /* ---------------------------- */
 .menu-section {
-    background-color: white; 
+    background-color: var(--bg); 
     padding-top: 50px;
     padding-bottom: 50px;
 }
@@ -46,28 +236,28 @@ section p {
 }
 
 .menu-category {
-    padding: 20px;
-    border: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 25px;
+    border-top: 5px solid var(--primary); /* Destaque superior em Amarelo */
     border-radius: var(--radius);
-    background: var(--bg);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    background: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
 }
 
 .menu-category h3 {
     text-align: center;
-    color: var(--primary);
-    font-size: 1.5rem;
+    color: var(--accent); /* Títulos de categoria em Vermelho Acento */
+    font-size: 1.6rem;
     margin-bottom: 25px;
     padding-bottom: 10px;
-    border-bottom: 3px solid var(--accent);
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
 }
 
 .menu-item {
     display: flex;
-    flex-wrap: wrap; /* Para garantir que o nome e preço ficam em linhas separadas em mobile */
+    flex-wrap: wrap; 
     justify-content: space-between;
     padding: 15px 0;
-    border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
 }
 
 .menu-item:last-child {
@@ -79,58 +269,271 @@ section p {
     font-weight: 600;
     color: var(--text);
     font-size: 1.1rem;
-    flex-basis: 70%; /* Dá mais espaço ao nome do item */
+    flex-basis: 70%; 
 }
 
 .item-price {
     font-weight: 700;
-    color: var(--primary);
-    font-size: 1.1rem;
-    flex-basis: 25%; /* Espaço para o preço */
+    color: var(--secondary);
+    font-size: 1.2rem;
+    flex-basis: 25%; 
     text-align: right;
 }
 
 .item-description {
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     color: #666;
     margin-top: 5px;
-    width: 100%; /* Ocupa toda a largura abaixo do nome e preço */
+    width: 100%; 
 }
 
 .menu-note {
     text-align: center;
     margin-top: 40px;
     font-style: italic;
-    color: #888;
+    color: var(--secondary);
+    font-weight: 500;
 }
 
 /* ---------------------------- */
 /* GALERIA            */
 /* ---------------------------- */
-/* ... [Restante do CSS da Galeria e Contactos mantido] ... */
+.gallery {
+    padding-bottom: 80px;
+    background-color: white;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.grid figure {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.grid figure:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.grid img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.6s ease;
+}
+
+.grid img:hover {
+    transform: scale(1.1);
+}
+
+.grid figcaption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.65);
+    color: white;
+    padding: 12px;
+    font-size: 1rem;
+    text-align: center;
+    font-weight: 500;
+}
+
+/* ---------------------------- */
+/* CONTACTOS           */
+/* ---------------------------- */
+#contactos {
+    text-align: center;
+    background-color: var(--secondary); /* Fundo em Verde */
+    color: white;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+#contactos h2 {
+    color: var(--primary); /* Título em Amarelo */
+    font-size: 2.2rem;
+}
+
+#contactos p {
+    color: #e0e0e0;
+}
+
+.contact-details {
+    max-width: 500px;
+    margin: 25px auto 35px;
+    text-align: left;
+    background: white;
+    padding: 30px;
+    border-radius: var(--radius);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.contact-details p {
+    margin-bottom: 12px;
+    max-width: 100%;
+    color: var(--text);
+}
+
+.contact-details strong {
+    color: var(--secondary);
+}
+
+.contact-details a {
+    color: var(--accent); /* Links em Vermelho Acento */
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contact-details a:hover {
+    text-decoration: underline;
+}
+
+/* Botão de Reserva grande (ajustado para contexto de Contactos) */
+.order-btn {
+    margin-top: 15px;
+    padding: 18px 50px;
+    font-size: 1.2rem;
+}
+
+
+/* ---------------------------- */
+/* RODAPÉ             */
+/* ---------------------------- */
+footer {
+    background: #111;
+    color: #f1f1f1;
+    padding: 40px 20px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+footer p {
+    color: #a8a8a8;
+    margin: 5px auto;
+}
+
+.heart-emoji {
+    color: var(--accent);
+}
 
 /* ---------------------------- */
 /* RESPONSIVIDADE        */
 /* ---------------------------- */
 
 @media (max-width: 768px) {
-    /* ... [CSS de responsividade anterior mantido] ... */
-
-    /* Ajuste para o Menu em Mobile */
-    .menu-grid {
-        gap: 25px;
+    
+    /* Navbar Responsiva - Hamburger Menu */
+    /* ... [Estilos de Navbar Responsiva mantidos] ... */
+    nav {
+        padding: 15px 20px;
     }
     
-    .menu-category {
-        padding: 15px;
+    .menu-icon {
+        display: block;
+        font-size: 1.8rem;
+        cursor: pointer;
+        color: var(--secondary);
     }
 
-    .item-name, .item-price {
-        font-size: 1rem;
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 65px; 
+        left: 0;
+        background: rgba(255, 255, 255, 0.98);
+        box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+        padding: 10px 0;
+    }
+
+    .nav-links li {
+        text-align: center;
+        width: 100%;
     }
     
-    .item-description {
-        font-size: 0.85rem;
+    .nav-links li a {
+        display: block;
+        padding: 15px 20px;
+        border-bottom: 1px solid rgba(0,0,0,0.05);
+        font-size: 1.1rem;
     }
 
+    #menu-toggle:checked ~ .nav-links {
+        display: flex;
+    }
+
+    /* Hero / Header */
+    header {
+        padding-top: 90px;
+    }
+
+    .header-buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Secção Sobre */
+    .sobre-content {
+        flex-direction: column;
+    }
+    
+    .sobre-text, .sobre-img {
+        flex: 1;
+        max-width: 100%;
+    }
+    
+    .sobre-img {
+        order: -1; 
+        height: 250px;
+    }
+
+    section {
+        padding: 50px 20px;
+    }
+    
+    section h2 {
+        font-size: 2rem;
+    }
+
+    hr {
+        margin: 0 20px;
+    }
+    
+    /* Galeria */
+    .grid {
+        grid-template-columns: 1fr; 
+    }
+
+    .grid img {
+        height: 280px;
+    }
+    
+    /* Contactos */
+    .order-btn {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+@media (max-width: 480px) {
+    .primary-btn, .secondary-btn, .order-btn {
+        width: 100%; 
+        display: block; 
+    }
+    
+    .header-buttons {
+        gap: 10px;
+    }
 }
